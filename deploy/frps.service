@@ -1,0 +1,21 @@
+# 管理 frps 的开机启动、崩溃重启与最小文件访问权限。
+[Unit]
+Description=frp server for AI audio service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=frp
+Group=frp
+ExecStart=/usr/local/bin/frps -c /etc/frp/frps.toml
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+UMask=0077
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

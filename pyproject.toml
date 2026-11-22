@@ -1,0 +1,32 @@
+[project]
+name = "ai-audio-service"
+version = "0.1.0"
+description = "Local, observable realtime sales voice agent"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "websockets>=14,<17",
+  "pydantic>=2.9,<3", "python-dotenv>=1,<2", "python-multipart>=0.0.18,<1",
+  "jieba>=0.42.1,<1", "rank-bm25>=0.2.2,<1", "httpx>=0.28,<1",
+  "docling-slim[convert-core,feat-chunking,format-markdown,format-docx,format-xlsx]>=2.150,<3",
+  "transformers>=4.51,<5", "pypdf>=6,<7", "pdfplumber>=0.11,<1", "sqlalchemy>=2.0,<3"
+]
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff>=0.9,<1", "reportlab>=4,<5"]
+samples = ["reportlab>=4,<5", "beautifulsoup4>=4.12,<5"]
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+include = ["backend*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "D100", "D102", "D103", "D105", "D107", "D417"]
+[tool.ruff.lint.pydocstyle]
+convention = "google"

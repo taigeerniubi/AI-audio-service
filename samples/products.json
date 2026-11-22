@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "linear", "name": "Linear", "category": "研发项目与任务管理 SaaS", "verified_on": "2026-11-11",
+    "audience": "产品与工程团队；需要跟踪问题、项目及研发周期的组织。此客户画像为基于功能的归纳。",
+    "sources": ["https://linear.app/pricing"],
+    "plans": [
+      {"name": "Free", "price": "0 美元；免费套餐", "features": "成员数不限，最多 2 个团队、250 个问题。"},
+      {"name": "Basic", "price": "10 美元/用户/月，按年计费；这是年付折算月价", "features": "最多 5 个团队；问题与文件上传数量不限；提供管理员角色。"},
+      {"name": "Business", "price": "16 美元/用户/月，按年计费；这是年付折算月价", "features": "团队数量不限；支持私有团队、访客及 Zendesk、Intercom 集成。"},
+      {"name": "Enterprise", "price": "定制报价；仅年付；金额未公开", "features": "支持 SAML、SCIM、细粒度管理、迁移与优先支持。"}
+    ],
+    "limits": "本次未核实按月付款价格；不能据年付折算价承诺月付报价。部分 AI 功能另需 AI credits。未核实税费、地区可用性和优惠。",
+    "discovery": "先了解团队人数、团队数量、问题量及是否需要私有团队；再讨论套餐。该段为演示建议，不是厂商承诺。"
+  },
+  {
+    "slug": "cal", "name": "Cal.com", "category": "在线日程预约与团队调度 SaaS", "verified_on": "2026-11-11",
+    "audience": "需要对外预约、销售演示、团队分配会议的个人和团队。此客户画像为功能归纳。",
+    "sources": ["https://cal.com/pricing"],
+    "plans": [
+      {"name": "Individuals", "price": "免费；1 名用户", "features": "预约链接与日历连接数量不限；支持 Stripe、PayPal 收款。"},
+      {"name": "Teams", "price": "12 美元/用户/月，按年计费；这是年付折算月价", "features": "1 个团队；轮转分配预约、共同可用时间、路由表单与预约分析；提供 14 天试用。"},
+      {"name": "Organizations", "price": "28 美元/用户/月，按年计费；这是年付折算月价", "features": "子团队不限；支持按自定义变量路由、SAML SSO、SCIM 与角色权限；提供 14 天试用。"},
+      {"name": "Enterprise", "price": "定制报价；年付；金额未公开", "features": "专属上线和工程支持、SLA、HRIS/目录集成与专属数据库。"}
+    ],
+    "limits": "这里是使用 Cal.com 的订阅套餐；把预约能力嵌入自有平台的 coss.com Scheduling 是另一产品，不能混用价格。本次未核实月付价、税费及短信费用细则。",
+    "discovery": "先确认是个人预约、团队轮转分配，还是把预约能力嵌入自有平台。该段为演示建议，不是厂商承诺。"
+  },
+  {
+    "slug": "tally", "name": "Tally", "category": "在线表单与线索收集 SaaS", "verified_on": "2026-11-11",
+    "audience": "需要收集咨询、报名及客户反馈的创作者和团队。此客户画像为功能归纳。",
+    "sources": ["https://tally.so/pricing", "https://tally.so/help/tally-pro", "https://tally.so/help/tally-business"],
+    "plans": [
+      {"name": "Free", "price": "免费；受公平使用政策约束", "features": "表单与提交数量不限；支持条件逻辑、计算、收款、文件上传及 Google Sheets、Notion 集成。"},
+      {"name": "Pro", "price": "月付 29 美元/月；年付 290 美元/年；两种付款方式不同", "features": "去除 Tally 品牌、自定义域名、团队协作及未完成提交记录；允许取消。"},
+      {"name": "Business", "price": "月付 89 美元/月；年付 890 美元/年；两种付款方式不同", "features": "包含 Pro 功能；支持提交记录自动保留期限、邮箱验证、90 天表单版本历史；允许取消。"}
+    ],
+    "limits": "价格页展示的 24、74 美元/月与年付折算有关；正式区分月付/年付以帮助页明确价格为本次依据。免费及付费套餐均受公平使用政策约束；不能承诺绝对无限资源。税费与付款地区待确认。",
+    "discovery": "先了解是否需要自定义域名、团队协作、未完成表单线索和数据保留控制。该段为演示建议，不是厂商承诺。"
+  }
+]

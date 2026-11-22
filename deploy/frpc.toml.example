@@ -1,0 +1,19 @@
+# 使用服务器证书和令牌连接 frps，只映射本地应用端口。
+serverAddr = "YOUR_SERVER_IP"
+serverPort = 7000
+loginFailExit = false
+auth.method = "token"
+auth.token = "REPLACE_WITH_RANDOM_TOKEN"
+auth.additionalScopes = ["HeartBeats", "NewWorkConns"]
+transport.tls.enable = true
+transport.tls.trustedCaFile = "output/deployment/runtime/ca.crt"
+transport.tls.serverName = "YOUR_SERVER_IP"
+log.to = "console"
+log.level = "info"
+
+[[proxies]]
+name = "ai-audio-service"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8000
+remotePort = 18000

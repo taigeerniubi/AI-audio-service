@@ -1,0 +1,26 @@
+# 管理 HTTPS 网关的启动、配置重载和自动恢复。
+[Unit]
+Description=Caddy gateway for AI audio service
+After=network-online.target frps.service
+Wants=network-online.target
+
+[Service]
+User=caddy
+Group=caddy
+ExecStart=/usr/local/bin/caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+ExecReload=/usr/local/bin/caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile
+Restart=on-failure
+RestartSec=5
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/caddy
+Environment=HOME=/var/lib/caddy
+UMask=0027
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+# 保持发送到 Linux 的脚本和配置使用 LF 换行。
+*.sh text eol=lf
+*.service text eol=lf
+Caddyfile* text eol=lf
+*.toml.example text eol=lf

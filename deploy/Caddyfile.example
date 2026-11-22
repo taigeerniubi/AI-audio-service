@@ -1,0 +1,11 @@
+# 在备案和 DNS 就绪后启用 HTTPS 入口，并通过访问密码保护整个演示应用。
+audio.example.com {
+    basic_auth {
+        demo REPLACE_WITH_CADDY_PASSWORD_HASH
+    }
+    reverse_proxy 127.0.0.1:18000
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+    }
+}
